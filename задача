@@ -1,0 +1,20 @@
+class Phone:
+    line_type = 'проводной'
+    
+    def __init__(self, dial_type_value):
+        self.dial_type = dial_type_value
+rotary_phone = Phone(dial_type_value='дисковый')
+
+keypad_phone = Phone(dial_type_value='кнопочный')
+print(f'Тип линии: {rotary_phone.line_type}')
+print(f'Тип линии: {keypad_phone.line_type}')
+
+rotary_phone.line_type = 'радио'
+
+print(f'Тип линии: {rotary_phone.line_type}')
+print(f'Тип линии: {keypad_phone.line_type}')
+
+Phone.line_type = 'спутниковый'
+
+print(f'Тип линии: {rotary_phone.line_type}')
+print(f'Тип линии: {keypad_phone.line_type}')
